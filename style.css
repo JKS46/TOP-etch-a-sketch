@@ -2,7 +2,7 @@
     background-color: orange;
     color: black;
     text-align: center;
-    font-family: "Comic Sans MS",'Times New Roman', Times, serif,cursive,sans-serif;
+    font-family: "Comic Sans MS",Arial,'Times New Roman', Times, serif,sans-serif;
 }
 body{
     display: flex;
@@ -13,23 +13,15 @@ body{
     padding: 0;
     margin: 0;
 }
-main{
-    display:flex;
-}
-.choices,.container{
-    display:flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    flex: auto;
-    width: 100%;
-
-}
 #box{
     border: 3px solid white;
     border-radius: 10px;
     background-color: red;
-    display: grid;
+    display:flex;
+    flex-wrap: wrap;
+}
+#box > div{
+   
 }
 footer{
     position: fixed;
@@ -40,7 +32,7 @@ footer{
 button,input{
     border: 2px solid honeydew;
     border-radius: 5px;
-    font: bold 20px "Comic Sans MS", cursive, sans-serif;
+    font: bold 20px "Comic Sans MS",Arial, sans-serif;
     margin-left: 15px;
     min-width: 100px;
     margin: 5px;
