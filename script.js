@@ -1,4 +1,4 @@
-const box = document.querySelector("#box>div");
+const box = document.querySelectorAll("#box>div");
 function createBox(){
    
 
