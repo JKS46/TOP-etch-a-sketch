@@ -1,4 +1,3 @@
-const cell = document.querySelectorAll("#box>div");
 const box = document.querySelector("#box");
 let row = 25,column = 25;
 for(i=0;i<row;i++){
@@ -11,16 +10,16 @@ for(i=0;i<row;i++){
         box.appendChild(div);
     }
 }
-function createBox(){
-
+function clearBox(){
+    console.log("clear");
+    cell.forEach((div)=>{
+        div.style.backgroundColor = "white";
+    });
 }
-function draw(boxRes){
-    
-}
-/* box.forEach((div) => {
-    div.addEventListener("hover", () => {
-    boxRes = document.getElementById("#input").value;
-    draw(boxRes);
+const cell = document.querySelectorAll("#box>div");
+cell.forEach((div) => {
+    div.addEventListener("mouseover",()=>{
+        div.style.backgroundColor = "black";
     });
 });
- */
+ /* boxRes = document.getElementById("#input").value; */
