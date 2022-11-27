@@ -24,6 +24,7 @@ body{
 }
 #box>div{
     background-color: white;
+    outline: gray solid 1px;
 }
 main{
     margin: 10px 0 30px;
