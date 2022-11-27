@@ -6,3 +6,4 @@ To do
 
 - [ ] add double click enabled brush 
 - [ ] add border to individual divs 
+- [ ] shade color

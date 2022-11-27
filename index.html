@@ -21,9 +21,10 @@
     </header>
     <main>
         <div class="choices">
-            <button id="black" title="Change brush color to black">Black</button>
-            <button id="random" title="Change brush color to random">Random</button>
-            <button id="eraser" title="Eraser">Eraser</button>
+            <button id="paintBlack" title="Change brush color to black" onclick="colorPicker(this.id)">Black</button>
+            <button id="paintRandom" title="Change brush color to random" onclick="colorPicker(this.id)">Random</button>
+           <!--  <button id="paintShade" title="adds increasing shade of color to each square" onclick="colorPicker(this.id)">Shade</button> -->
+            <button id="paintEraser" title="Eraser" onclick="colorPicker(this.id)">Eraser</button>
             <button id="reset" title="Clear the canvas" onclick="reset()">Reset</button>
         </div>
         <div class="container">
