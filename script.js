@@ -7,6 +7,12 @@ let paintColor = "";
 createDivs(input,input);
 draw();
 
+let drag = false;
+document.body.addEventListener("mousedown",()=>{drag=true}
+);
+document.body.addEventListener("mouseup",()=>{drag=false}
+);
+
 /* creates divs inside #box */
 function createDivs(row,column){
     for(i=0;i<row;i++){
@@ -27,6 +33,7 @@ function draw(paintColor){
     cell = document.querySelectorAll("#box>div");
     removeListeners();
     cell.forEach((div) => {
+        div.addEventListener('mousedown',paintColor);
         div.addEventListener("mouseover",paintColor);
     });
 }
@@ -78,17 +85,22 @@ function createBox(){
 
 function removeListeners(){
     cell.forEach((div) => {
+        div.removeEventListener('mousedown',paintColor||paintBlack);
         div.removeEventListener('mouseover',paintColor||paintBlack);
     });
 }
 /* below fns choose which color to paint on the divs inside #box */
 function paintBlack(e){
-    e.target.style.backgroundColor = "black";
+    if(drag){
+        e.target.style.backgroundColor = "black";
+    }
 }
 
 function paintRandom(e){
     let color = Math.floor(Math.random()*16777215).toString(16);
-    e.target.style.backgroundColor = "#" + color;
+    if(drag){
+        e.target.style.backgroundColor = "#" + color;
+    }
 }
 
 /* function paintShade(e){
@@ -96,5 +108,7 @@ function paintRandom(e){
 } */
 
 function paintEraser(e){
-    e.target.style.backgroundColor = "white";
+    if(drag){
+        e.target.style.backgroundColor = "white";
+    }
 }
