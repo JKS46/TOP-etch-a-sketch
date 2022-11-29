@@ -8,9 +8,9 @@ createDivs(input,input);
 draw();
 
 let drag = false;
-document.body.addEventListener("mousedown",()=>{drag=true}
+box.addEventListener("mousedown",()=>{drag=true}
 );
-document.body.addEventListener("mouseup",()=>{drag=false}
+box.addEventListener("mouseup",()=>{drag=false}
 );
 
 /* creates divs inside #box */
