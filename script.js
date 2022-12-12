@@ -13,6 +13,17 @@ box.addEventListener("mousedown",()=>{drag=true}
 box.addEventListener("mouseup",()=>{drag=false}
 );
 
+/* detects if user is on mobile or desktop */
+let userAlerted = false;
+document.addEventListener("touchstart",notDesktop);
+function notDesktop(){
+    if(!userAlerted){
+        alert("This website is not meant to be used on touchscreens");
+        userAlerted = true;
+        document.removeEventListener("touchstart",notDesktop);
+    }
+}
+
 /* creates divs inside #box */
 function createDivs(row,column){
     for(i=0;i<row;i++){
